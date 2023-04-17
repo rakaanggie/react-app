@@ -3,8 +3,9 @@ phases:
   install:
     commands:
       # Install Docker
-      - apt update -y
-      - apt install -y docker.io
+      - yum update -y
+      - yum install -y docker
+      - yum install -y docker-compose-plugin
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
